@@ -42,12 +42,12 @@ namespace Control_Progreso {
                 Random rand = new Random();
                 Salud = 100;
                 edad = rand.Next(0, 300);
-                Velocidad = rand.Next(1, 10);
-                Destreza = rand.Next(1, 5);
-                Fuerza = rand.Next(1, 10);
-                Nivel = rand.Next(1, 10);
-                Armadura = rand.Next(1, 10);
-                switch (rand.Next(1,5)) {
+                Velocidad = rand.Next(1, 11);
+                Destreza = rand.Next(1, 6);
+                Fuerza = rand.Next(1, 11);
+                Nivel = rand.Next(1, 11);
+                Armadura = rand.Next(1, 11);
+                switch (rand.Next(1,6)) {
                     case 1:
                         tipo = tipoPersonaje.Elfo;
                         break;
