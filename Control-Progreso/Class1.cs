@@ -21,6 +21,7 @@ namespace Control_Progreso {
             private DateTime fechaNac;
             private int edad;
             private int salud;
+            private int personajeCreado = 0;
 
             private int velocidad, destreza, fuerza, nivel, armadura;
 
@@ -35,32 +36,34 @@ namespace Control_Progreso {
             public int Nivel { get => nivel; set => nivel = value; }
             public int Armadura { get => armadura; set => armadura = value; }
             public tipoPersonaje Tipo { get => tipo; set => tipo = value; }
+            public int PersonajeCreado { get => personajeCreado; set => personajeCreado = value; }
 
-
-
-            private void nuevoPersonaje() { // no estoy seguro desde dónde llamar a esta funcion
+            public Personaje datosAleatorios() { // no estoy seguro desde dónde llamar a esta funcion
                 Random rand = new Random();
-                Salud = 100;
-                edad = rand.Next(0, 300);
-                Velocidad = rand.Next(1, 11);
-                Destreza = rand.Next(1, 6);
-                Fuerza = rand.Next(1, 11);
-                Nivel = rand.Next(1, 11);
-                Armadura = rand.Next(1, 11);
+                Personaje nuevoPersonaje = new Personaje();
+                nuevoPersonaje.Salud = 100;
+                nuevoPersonaje.edad = rand.Next(0, 300);
+                nuevoPersonaje.Velocidad = rand.Next(1, 11);
+                nuevoPersonaje.Destreza = rand.Next(1, 6);
+                nuevoPersonaje.Fuerza = rand.Next(1, 11);
+                nuevoPersonaje.Nivel = rand.Next(1, 11);
+                nuevoPersonaje.Armadura = rand.Next(1, 11);
                 switch (rand.Next(1,6)) {
                     case 1:
-                        tipo = tipoPersonaje.Elfo;
+                        nuevoPersonaje.tipo = tipoPersonaje.Elfo;
                         break;
                     case 2:
-                        tipo = tipoPersonaje.Hobbit;
+                        nuevoPersonaje.tipo = tipoPersonaje.Hobbit;
                         break;
                     case 3:
-                        tipo = tipoPersonaje.Humano;
+                        nuevoPersonaje.tipo = tipoPersonaje.Humano;
                         break;
                     case 4:
-                        tipo = tipoPersonaje.Orco;
+                        nuevoPersonaje.tipo = tipoPersonaje.Orco;
                         break;
                 }
+                nuevoPersonaje.personajeCreado = 1;
+                return nuevoPersonaje;
             }
         }
     }

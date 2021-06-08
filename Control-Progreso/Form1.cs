@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Control_Progreso;
 
 namespace Control_Progreso {
     public partial class Form1 : Form {
@@ -14,5 +15,8 @@ namespace Control_Progreso {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e) { // Botón de crear personaje
+
+        }
     }
 }
