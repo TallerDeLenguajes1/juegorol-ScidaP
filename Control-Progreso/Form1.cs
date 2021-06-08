@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Control_Progreso {
     public partial class Form1 : Form {
+        private List<Personaje> ListaPersonajes = new List<Personaje>();
         public Form1() {
             InitializeComponent();
         }
@@ -17,6 +18,12 @@ namespace Control_Progreso {
         private void button1_Click(object sender, EventArgs e) { // Botón de crear personaje
             Personaje nuevaClasePersonaje = new Personaje();
             Personaje nuevoPersonaje = nuevaClasePersonaje.datosAleatorios();
+            agregarPersonajeALista(nuevoPersonaje);
+
+        }
+
+        private void agregarPersonajeALista(Personaje nuevoPersonaje) {
+            ListaPersonajes.Add(nuevoPersonaje);
         }
     }
 }
