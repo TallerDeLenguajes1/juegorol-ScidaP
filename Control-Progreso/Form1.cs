@@ -15,7 +15,8 @@ namespace Control_Progreso {
         }
 
         private void button1_Click(object sender, EventArgs e) { // Botón de crear personaje
-
+            Personaje nuevaClasePersonaje = new Personaje();
+            Personaje nuevoPersonaje = nuevaClasePersonaje.datosAleatorios();
         }
     }
 }

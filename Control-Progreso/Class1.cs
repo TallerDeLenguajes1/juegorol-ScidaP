@@ -42,7 +42,7 @@ namespace Control_Progreso {
             nuevoPersonaje.Fuerza = rand.Next(1, 11);
             nuevoPersonaje.Nivel = rand.Next(1, 11);
             nuevoPersonaje.Armadura = rand.Next(1, 11);
-            switch (rand.Next(1, 6)) {
+            switch (rand.Next(1, 5)) {
                 case 1:
                     nuevoPersonaje.tipo = tipoPersonaje.Elfo;
                     break;
