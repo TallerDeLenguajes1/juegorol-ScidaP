@@ -25,5 +25,9 @@ namespace Control_Progreso {
         private void agregarPersonajeALista(Personaje nuevoPersonaje) {
             ListaPersonajes.Add(nuevoPersonaje);
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+
+        }
     }
 }
