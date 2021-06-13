@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Control_Progreso {
     public partial class Pelea : Form {
-        int IndiceRandom1, IndiceRandom2;
+        int IndiceRandom1, IndiceRandom2, cantAtaques = 0; // cantAtaques = contador de ataques. Solo se pueden 3 por jugador.
         List<Personaje> ListaPeleadores = new List<Personaje>();
         public Pelea(List<Personaje> Personajes) {
             InitializeComponent();
@@ -94,6 +94,7 @@ namespace Control_Progreso {
             } else {
                 int nuevaSaludP1 = Peleadores[IndiceRandom1].Salud -= danio;
                 lblVidaP1.Text = nuevaSaludP1.ToString();
+                cantAtaques++;
             }
         }
     }
