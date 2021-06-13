@@ -431,6 +431,7 @@ namespace Control_Progreso {
             this.btnAtacar1.TabIndex = 30;
             this.btnAtacar1.Text = "ATACAR";
             this.btnAtacar1.UseVisualStyleBackColor = true;
+            this.btnAtacar1.Click += new System.EventHandler(this.btnAtacar_Click);
             // 
             // btnAtacar2
             // 
@@ -441,6 +442,7 @@ namespace Control_Progreso {
             this.btnAtacar2.TabIndex = 31;
             this.btnAtacar2.Text = "ATACAR";
             this.btnAtacar2.UseVisualStyleBackColor = true;
+            this.btnAtacar2.Click += new System.EventHandler(this.btnAtacar_Click);
             // 
             // Pelea
             // 
