@@ -111,10 +111,18 @@ namespace Control_Progreso {
             string Vencedor;
             if (Peleadores[IndiceRandom1].Salud > Peleadores[IndiceRandom2].Salud) {
                 Vencedor = Peleadores[IndiceRandom1].Nombre + " (" + Peleadores[IndiceRandom1].Tipo + ")";
-            } else {
+                Peleadores.RemoveAt(IndiceRandom2);
+            } else if (Peleadores[IndiceRandom1].Salud < Peleadores[IndiceRandom2].Salud) {
                 Vencedor = Peleadores[IndiceRandom2].Nombre + " (" + Peleadores[IndiceRandom2].Tipo + ")";
+                Peleadores.RemoveAt(IndiceRandom1);
+            } else {
+                Vencedor = "EMPATE";
             }
-            MessageBox.Show("¡" + Vencedor + " ganó la batalla!", "¡Ya tenemos un ganador!");
+            if (Vencedor == "EMPATE") {
+                MessageBox.Show("Fue Empate! ABURRIDISMO!", "EMPATE");
+            } else {
+                MessageBox.Show("¡" + Vencedor + " ganó la batalla!", "¡Ya tenemos un ganador!");
+            }
             this.Close();
         }
     }
