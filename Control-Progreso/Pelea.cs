@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Control_Progreso {
@@ -41,7 +35,7 @@ namespace Control_Progreso {
             lblTipoP2.Text = Peleadores[IndiceRandom2].Tipo;
             lblEdadP2.Text = Peleadores[IndiceRandom2].Edad.ToString();
             lblVidaP2.Text = Peleadores[IndiceRandom2].Salud.ToString();
-            lblVelocidadP2.Text = Peleadores[IndiceRandom2].Velocidad.ToString(); 
+            lblVelocidadP2.Text = Peleadores[IndiceRandom2].Velocidad.ToString();
             lblFuerzaP2.Text = Peleadores[IndiceRandom2].Fuerza.ToString();
             lblNivelP2.Text = Peleadores[IndiceRandom2].Nivel.ToString();
             lblDestrezaP2.Text = Peleadores[IndiceRandom2].Destreza.ToString();
@@ -53,7 +47,7 @@ namespace Control_Progreso {
         private int calcularDanioAtaque(List<Personaje> Peleadores, object sender) {
             Random rand2 = new Random();
             Button boton = (Button)sender;
-            int ED = rand2.Next(39, 101); // Efectividad de disparo: valor de 1 a 100 (Personaje que ataca)
+            int ED = rand2.Next(40, 101); // Efectividad de disparo: valor de 40 a 100 (Personaje que ataca)
             if (boton.Name == "btnAtacar1") {
                 int PD = Peleadores[IndiceRandom1].Destreza * Peleadores[IndiceRandom1].Fuerza * Peleadores[IndiceRandom1].Nivel; // Poder de disparo (Personaje que ataca)
                 int VA = PD * ED; // Valor de ataque (Personaje que ataca)
@@ -90,12 +84,38 @@ namespace Control_Progreso {
             Button boton = (Button)sender;
             if (boton.Name == "btnAtacar1") {
                 int nuevaSaludP2 = Peleadores[IndiceRandom2].Salud -= danio;
-                lblVidaP2.Text = nuevaSaludP2.ToString();
+                if (nuevaSaludP2 < 0) { // Para que la vida de algún personaje no aparezca en negativo.
+                    lblVidaP2.Text = "0";
+                    Peleadores[IndiceRandom2].Salud = 0;
+                    MostrarVencedor(Peleadores);
+                } else {
+                    lblVidaP2.Text = nuevaSaludP2.ToString();
+                }
             } else {
-                int nuevaSaludP1 = Peleadores[IndiceRandom1].Salud -= danio;
-                lblVidaP1.Text = nuevaSaludP1.ToString();
                 cantAtaques++;
+                int nuevaSaludP1 = Peleadores[IndiceRandom1].Salud -= danio;
+                if (nuevaSaludP1 < 0) { // Para que la vida de algún personaje no aparezca en negativo.
+                    lblVidaP1.Text = "0";
+                    Peleadores[IndiceRandom1].Salud = 0;
+                    MostrarVencedor(Peleadores);
+                } else {
+                    lblVidaP1.Text = nuevaSaludP1.ToString();
+                }
             }
+            if (cantAtaques >= 3) {
+                MostrarVencedor(Peleadores);
+            }
+        }
+
+        private void MostrarVencedor(List<Personaje> Peleadores) {
+            string Vencedor;
+            if (Peleadores[IndiceRandom1].Salud > Peleadores[IndiceRandom2].Salud) {
+                Vencedor = Peleadores[IndiceRandom1].Nombre + " (" + Peleadores[IndiceRandom1].Tipo + ")";
+            } else {
+                Vencedor = Peleadores[IndiceRandom2].Nombre + " (" + Peleadores[IndiceRandom2].Tipo + ")";
+            }
+            MessageBox.Show("¡" + Vencedor + " ganó la batalla!", "¡Ya tenemos un ganador!");
+            this.Close();
         }
     }
 }
