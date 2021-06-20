@@ -55,9 +55,9 @@ namespace Control_Progreso {
             this.listPersonajesCreados.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listPersonajesCreados.HideSelection = false;
-            this.listPersonajesCreados.Location = new System.Drawing.Point(236, 28);
+            this.listPersonajesCreados.Location = new System.Drawing.Point(227, 60);
             this.listPersonajesCreados.Name = "listPersonajesCreados";
-            this.listPersonajesCreados.Size = new System.Drawing.Size(328, 217);
+            this.listPersonajesCreados.Size = new System.Drawing.Size(328, 126);
             this.listPersonajesCreados.TabIndex = 2;
             this.listPersonajesCreados.UseCompatibleStateImageBehavior = false;
             this.listPersonajesCreados.View = System.Windows.Forms.View.List;
@@ -70,6 +70,7 @@ namespace Control_Progreso {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(576, 282);
             this.Controls.Add(this.listPersonajesCreados);
             this.Controls.Add(this.btnIniciarPelea);

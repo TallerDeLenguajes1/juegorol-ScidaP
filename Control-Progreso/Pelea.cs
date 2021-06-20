@@ -10,6 +10,7 @@ namespace Control_Progreso {
             InitializeComponent();
             ListaPeleadores = Personajes;
             cargarDatosPelea(Personajes);
+            PrimeraVentana.usarAPIClima();
         }
 
         public void cargarDatosPelea(List<Personaje> Peleadores) {
@@ -111,10 +112,8 @@ namespace Control_Progreso {
             string Vencedor;
             if (Peleadores[IndiceRandom1].Salud > Peleadores[IndiceRandom2].Salud) {
                 Vencedor = Peleadores[IndiceRandom1].Nombre + " (" + Peleadores[IndiceRandom1].Tipo + ")";
-                Peleadores.RemoveAt(IndiceRandom2);
             } else if (Peleadores[IndiceRandom1].Salud < Peleadores[IndiceRandom2].Salud) {
                 Vencedor = Peleadores[IndiceRandom2].Nombre + " (" + Peleadores[IndiceRandom2].Tipo + ")";
-                Peleadores.RemoveAt(IndiceRandom1);
             } else {
                 Vencedor = "EMPATE";
             }
@@ -123,7 +122,26 @@ namespace Control_Progreso {
             } else {
                 MessageBox.Show("¡" + Vencedor + " ganó la batalla!", "¡Ya tenemos un ganador!");
             }
+            ModificarPeleadores(Peleadores);
             this.Close();
         }
+
+        private void ModificarPeleadores(List<Personaje> Peleadores) { // Elimina al perdedor y le bonifica un poco de vida, nivel y fuerza al ganador
+            if (Peleadores[IndiceRandom1].Salud > Peleadores[IndiceRandom2].Salud) {
+                //Bonificar al ganador
+                Peleadores[IndiceRandom1].Salud += 20;
+                Peleadores[IndiceRandom1].Fuerza += 1;
+                Peleadores[IndiceRandom1].Nivel += 1;
+                //Elminar al perdedor
+                Peleadores.RemoveAt(IndiceRandom2);
+            } else if (Peleadores[IndiceRandom1].Salud < Peleadores[IndiceRandom2].Salud) {
+                //Bonificar al ganador
+                Peleadores[IndiceRandom2].Salud += 20;
+                Peleadores[IndiceRandom2].Fuerza += 1;
+                Peleadores[IndiceRandom2].Nivel += 1;
+                //Elminar al perdedor
+                Peleadores.RemoveAt(IndiceRandom1);
+            }
+        } 
     }
 }
