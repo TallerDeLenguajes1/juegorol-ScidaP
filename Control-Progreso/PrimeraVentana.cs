@@ -56,6 +56,10 @@ namespace Control_Progreso {
                                             Image img4 = Image.FromFile(path + "\\FotosClima\\despejado.jpg");
                                             this.BackgroundImage = img4;
                                             break;
+                                        case 5:
+                                            Image img5 = Image.FromFile(path + "\\FotosClima\\lluvia.jpg");
+                                            this.BackgroundImage = img5;
+                                            break;
                                     }
                                 }
                             }
@@ -78,6 +82,8 @@ namespace Control_Progreso {
                 return 3; // PARCIALMENTE NUBLADO
             } else if (desc == tiposDeClima[12]) {
                 return 4; // DESPEJADO
+            } else {
+                return 5; // LLUVIA
             }
             return 0;
         }

@@ -59,6 +59,10 @@ namespace Control_Progreso {
                                             Image img4 = Image.FromFile(path + "\\FotosClima\\despejado.jpg");
                                             this.BackgroundImage = img4;
                                             break;
+                                        case 5:
+                                            Image img5 = Image.FromFile(path + "\\FotosClima\\lluvia.jpg");
+                                            this.BackgroundImage = img5;
+                                            break;
                                     }
                                 }
                             }
