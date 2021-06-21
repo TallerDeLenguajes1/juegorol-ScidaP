@@ -32,7 +32,6 @@ namespace Control_Progreso {
         private string tipo;
         private string tipoGuerrero;
         private string nombre;
-        private DateTime fechaNac;
         private int edad;
         private int salud;
 
@@ -40,7 +39,6 @@ namespace Control_Progreso {
 
         public string Tipo { get => tipo; set => tipo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
         public int Edad { get => edad; set => edad = value; }
         public int Salud { get => salud; set => salud = value; }
         public int Velocidad { get => velocidad; set => velocidad = value; }
