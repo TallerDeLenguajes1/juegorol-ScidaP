@@ -36,7 +36,7 @@ namespace Control_Progreso {
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblNombreP2 = new System.Windows.Forms.Label();
+            this.lblEspecialidadP2 = new System.Windows.Forms.Label();
             this.lblTipoP2 = new System.Windows.Forms.Label();
             this.lblEdadP2 = new System.Windows.Forms.Label();
             this.lblVelocidadP2 = new System.Windows.Forms.Label();
@@ -51,11 +51,13 @@ namespace Control_Progreso {
             this.lblVelocidadP1 = new System.Windows.Forms.Label();
             this.lblEdadP1 = new System.Windows.Forms.Label();
             this.lblTipoP1 = new System.Windows.Forms.Label();
-            this.lblNombreP1 = new System.Windows.Forms.Label();
+            this.lblEspecialidadP1 = new System.Windows.Forms.Label();
             this.lblVidaP2 = new System.Windows.Forms.Label();
             this.lblVidaP1 = new System.Windows.Forms.Label();
             this.btnAtacar1 = new System.Windows.Forms.Button();
             this.btnAtacar2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPersonaje1
@@ -95,19 +97,19 @@ namespace Control_Progreso {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(331, 91);
+            this.label1.Location = new System.Drawing.Point(7, 3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label1.Size = new System.Drawing.Size(121, 25);
+            this.label1.Size = new System.Drawing.Size(181, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = "NOMBRE";
+            this.label1.Text = "ESPECIALIDAD";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(347, 116);
+            this.label2.Location = new System.Drawing.Point(53, 25);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label2.Size = new System.Drawing.Size(81, 25);
@@ -119,7 +121,7 @@ namespace Control_Progreso {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(344, 141);
+            this.label4.Location = new System.Drawing.Point(50, 50);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Size = new System.Drawing.Size(88, 25);
@@ -131,7 +133,7 @@ namespace Control_Progreso {
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(340, 179);
+            this.label5.Location = new System.Drawing.Point(46, 88);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Size = new System.Drawing.Size(103, 35);
@@ -143,7 +145,7 @@ namespace Control_Progreso {
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(318, 235);
+            this.label6.Location = new System.Drawing.Point(24, 144);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Size = new System.Drawing.Size(149, 25);
@@ -155,7 +157,7 @@ namespace Control_Progreso {
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(320, 310);
+            this.label7.Location = new System.Drawing.Point(26, 219);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label7.Size = new System.Drawing.Size(139, 25);
@@ -167,7 +169,7 @@ namespace Control_Progreso {
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(330, 260);
+            this.label8.Location = new System.Drawing.Point(36, 169);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label8.Size = new System.Drawing.Size(113, 25);
@@ -179,7 +181,7 @@ namespace Control_Progreso {
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(343, 285);
+            this.label9.Location = new System.Drawing.Point(49, 194);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label9.Size = new System.Drawing.Size(92, 25);
@@ -191,28 +193,30 @@ namespace Control_Progreso {
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(320, 335);
+            this.label10.Location = new System.Drawing.Point(26, 244);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label10.Size = new System.Drawing.Size(147, 25);
             this.label10.TabIndex = 11;
             this.label10.Text = "ARMADURA";
             // 
-            // lblNombreP2
+            // lblEspecialidadP2
             // 
-            this.lblNombreP2.AutoSize = true;
-            this.lblNombreP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNombreP2.Location = new System.Drawing.Point(487, 91);
-            this.lblNombreP2.Name = "lblNombreP2";
-            this.lblNombreP2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.lblNombreP2.Size = new System.Drawing.Size(121, 25);
-            this.lblNombreP2.TabIndex = 12;
-            this.lblNombreP2.Text = "NOMBRE";
+            this.lblEspecialidadP2.AutoSize = true;
+            this.lblEspecialidadP2.BackColor = System.Drawing.Color.Transparent;
+            this.lblEspecialidadP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEspecialidadP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEspecialidadP2.Location = new System.Drawing.Point(487, 91);
+            this.lblEspecialidadP2.Name = "lblEspecialidadP2";
+            this.lblEspecialidadP2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblEspecialidadP2.Size = new System.Drawing.Size(121, 25);
+            this.lblEspecialidadP2.TabIndex = 12;
+            this.lblEspecialidadP2.Text = "NOMBRE";
             // 
             // lblTipoP2
             // 
             this.lblTipoP2.AutoSize = true;
+            this.lblTipoP2.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTipoP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTipoP2.Location = new System.Drawing.Point(487, 116);
@@ -225,6 +229,7 @@ namespace Control_Progreso {
             // lblEdadP2
             // 
             this.lblEdadP2.AutoSize = true;
+            this.lblEdadP2.BackColor = System.Drawing.Color.Transparent;
             this.lblEdadP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEdadP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblEdadP2.Location = new System.Drawing.Point(487, 141);
@@ -237,6 +242,7 @@ namespace Control_Progreso {
             // lblVelocidadP2
             // 
             this.lblVelocidadP2.AutoSize = true;
+            this.lblVelocidadP2.BackColor = System.Drawing.Color.Transparent;
             this.lblVelocidadP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVelocidadP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblVelocidadP2.Location = new System.Drawing.Point(487, 235);
@@ -249,6 +255,7 @@ namespace Control_Progreso {
             // lblFuerzaP2
             // 
             this.lblFuerzaP2.AutoSize = true;
+            this.lblFuerzaP2.BackColor = System.Drawing.Color.Transparent;
             this.lblFuerzaP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFuerzaP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblFuerzaP2.Location = new System.Drawing.Point(487, 260);
@@ -261,6 +268,7 @@ namespace Control_Progreso {
             // lblNivelP2
             // 
             this.lblNivelP2.AutoSize = true;
+            this.lblNivelP2.BackColor = System.Drawing.Color.Transparent;
             this.lblNivelP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNivelP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblNivelP2.Location = new System.Drawing.Point(487, 285);
@@ -273,6 +281,7 @@ namespace Control_Progreso {
             // lblDestrezaP2
             // 
             this.lblDestrezaP2.AutoSize = true;
+            this.lblDestrezaP2.BackColor = System.Drawing.Color.Transparent;
             this.lblDestrezaP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDestrezaP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblDestrezaP2.Location = new System.Drawing.Point(487, 310);
@@ -285,6 +294,7 @@ namespace Control_Progreso {
             // lblArmaduraP2
             // 
             this.lblArmaduraP2.AutoSize = true;
+            this.lblArmaduraP2.BackColor = System.Drawing.Color.Transparent;
             this.lblArmaduraP2.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblArmaduraP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblArmaduraP2.Location = new System.Drawing.Point(487, 335);
@@ -297,9 +307,10 @@ namespace Control_Progreso {
             // lblArmaduraP1
             // 
             this.lblArmaduraP1.AutoSize = true;
+            this.lblArmaduraP1.BackColor = System.Drawing.Color.Transparent;
             this.lblArmaduraP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblArmaduraP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblArmaduraP1.Location = new System.Drawing.Point(165, 335);
+            this.lblArmaduraP1.Location = new System.Drawing.Point(166, 335);
             this.lblArmaduraP1.Name = "lblArmaduraP1";
             this.lblArmaduraP1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblArmaduraP1.Size = new System.Drawing.Size(121, 25);
@@ -310,6 +321,7 @@ namespace Control_Progreso {
             // lblDestrezaP1
             // 
             this.lblDestrezaP1.AutoSize = true;
+            this.lblDestrezaP1.BackColor = System.Drawing.Color.Transparent;
             this.lblDestrezaP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDestrezaP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDestrezaP1.Location = new System.Drawing.Point(165, 310);
@@ -323,6 +335,7 @@ namespace Control_Progreso {
             // lblNivelP1
             // 
             this.lblNivelP1.AutoSize = true;
+            this.lblNivelP1.BackColor = System.Drawing.Color.Transparent;
             this.lblNivelP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNivelP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblNivelP1.Location = new System.Drawing.Point(165, 285);
@@ -336,6 +349,7 @@ namespace Control_Progreso {
             // lblFuerzaP1
             // 
             this.lblFuerzaP1.AutoSize = true;
+            this.lblFuerzaP1.BackColor = System.Drawing.Color.Transparent;
             this.lblFuerzaP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFuerzaP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblFuerzaP1.Location = new System.Drawing.Point(165, 260);
@@ -349,7 +363,9 @@ namespace Control_Progreso {
             // lblVelocidadP1
             // 
             this.lblVelocidadP1.AutoSize = true;
+            this.lblVelocidadP1.BackColor = System.Drawing.Color.Transparent;
             this.lblVelocidadP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVelocidadP1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblVelocidadP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblVelocidadP1.Location = new System.Drawing.Point(165, 235);
             this.lblVelocidadP1.Name = "lblVelocidadP1";
@@ -362,9 +378,10 @@ namespace Control_Progreso {
             // lblEdadP1
             // 
             this.lblEdadP1.AutoSize = true;
+            this.lblEdadP1.BackColor = System.Drawing.Color.Transparent;
             this.lblEdadP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEdadP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEdadP1.Location = new System.Drawing.Point(165, 141);
+            this.lblEdadP1.Location = new System.Drawing.Point(166, 141);
             this.lblEdadP1.Name = "lblEdadP1";
             this.lblEdadP1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblEdadP1.Size = new System.Drawing.Size(121, 25);
@@ -375,6 +392,7 @@ namespace Control_Progreso {
             // lblTipoP1
             // 
             this.lblTipoP1.AutoSize = true;
+            this.lblTipoP1.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTipoP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblTipoP1.Location = new System.Drawing.Point(165, 116);
@@ -385,22 +403,25 @@ namespace Control_Progreso {
             this.lblTipoP1.Text = "NOMBRE";
             this.lblTipoP1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblNombreP1
+            // lblEspecialidadP1
             // 
-            this.lblNombreP1.AutoSize = true;
-            this.lblNombreP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblNombreP1.Location = new System.Drawing.Point(165, 91);
-            this.lblNombreP1.Name = "lblNombreP1";
-            this.lblNombreP1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.lblNombreP1.Size = new System.Drawing.Size(121, 25);
-            this.lblNombreP1.TabIndex = 20;
-            this.lblNombreP1.Text = "NOMBRE";
-            this.lblNombreP1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEspecialidadP1.AutoSize = true;
+            this.lblEspecialidadP1.BackColor = System.Drawing.Color.Transparent;
+            this.lblEspecialidadP1.Font = new System.Drawing.Font("Yu Gothic Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEspecialidadP1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEspecialidadP1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEspecialidadP1.Location = new System.Drawing.Point(165, 91);
+            this.lblEspecialidadP1.Name = "lblEspecialidadP1";
+            this.lblEspecialidadP1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.lblEspecialidadP1.Size = new System.Drawing.Size(121, 25);
+            this.lblEspecialidadP1.TabIndex = 20;
+            this.lblEspecialidadP1.Text = "NOMBRE";
+            this.lblEspecialidadP1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblVidaP2
             // 
             this.lblVidaP2.AutoSize = true;
+            this.lblVidaP2.BackColor = System.Drawing.Color.Transparent;
             this.lblVidaP2.Font = new System.Drawing.Font("Yu Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVidaP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblVidaP2.Location = new System.Drawing.Point(487, 179);
@@ -413,6 +434,7 @@ namespace Control_Progreso {
             // lblVidaP1
             // 
             this.lblVidaP1.AutoSize = true;
+            this.lblVidaP1.BackColor = System.Drawing.Color.Transparent;
             this.lblVidaP1.Font = new System.Drawing.Font("Yu Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVidaP1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblVidaP1.Location = new System.Drawing.Point(183, 179);
@@ -444,24 +466,41 @@ namespace Control_Progreso {
             this.btnAtacar2.UseVisualStyleBackColor = true;
             this.btnAtacar2.Click += new System.EventHandler(this.btnAtacar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Location = new System.Drawing.Point(290, 91);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(191, 275);
+            this.panel1.TabIndex = 32;
+            // 
             // Pelea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblArmaduraP1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtacar2);
             this.Controls.Add(this.btnAtacar1);
             this.Controls.Add(this.lblVidaP1);
             this.Controls.Add(this.lblVidaP2);
-            this.Controls.Add(this.lblArmaduraP1);
             this.Controls.Add(this.lblDestrezaP1);
             this.Controls.Add(this.lblNivelP1);
             this.Controls.Add(this.lblFuerzaP1);
             this.Controls.Add(this.lblVelocidadP1);
             this.Controls.Add(this.lblEdadP1);
             this.Controls.Add(this.lblTipoP1);
-            this.Controls.Add(this.lblNombreP1);
+            this.Controls.Add(this.lblEspecialidadP1);
             this.Controls.Add(this.lblArmaduraP2);
             this.Controls.Add(this.lblDestrezaP2);
             this.Controls.Add(this.lblNivelP2);
@@ -469,21 +508,14 @@ namespace Control_Progreso {
             this.Controls.Add(this.lblVelocidadP2);
             this.Controls.Add(this.lblEdadP2);
             this.Controls.Add(this.lblTipoP2);
-            this.Controls.Add(this.lblNombreP2);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEspecialidadP2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblPersonaje2);
             this.Controls.Add(this.lblPersonaje1);
             this.Name = "Pelea";
             this.Text = "Form2";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,7 +535,7 @@ namespace Control_Progreso {
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblNombreP2;
+        private System.Windows.Forms.Label lblEspecialidadP2;
         private System.Windows.Forms.Label lblTipoP2;
         private System.Windows.Forms.Label lblEdadP2;
         private System.Windows.Forms.Label lblVelocidadP2;
@@ -518,10 +550,11 @@ namespace Control_Progreso {
         private System.Windows.Forms.Label lblVelocidadP1;
         private System.Windows.Forms.Label lblEdadP1;
         private System.Windows.Forms.Label lblTipoP1;
-        private System.Windows.Forms.Label lblNombreP1;
+        private System.Windows.Forms.Label lblEspecialidadP1;
         private System.Windows.Forms.Label lblVidaP2;
         private System.Windows.Forms.Label lblVidaP1;
         private System.Windows.Forms.Button btnAtacar1;
         private System.Windows.Forms.Button btnAtacar2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -93,25 +93,25 @@ namespace Control_Progreso {
                 IndiceRandom2 = rand.Next(0, Peleadores.Count);
             }
             lblPersonaje1.Text = Peleadores[IndiceRandom1].Nombre;
-            lblNombreP1.Text = Peleadores[IndiceRandom1].Nombre;
+            lblEspecialidadP1.Text = Peleadores[IndiceRandom1].TipoGuerrero;
             lblTipoP1.Text = Peleadores[IndiceRandom1].Tipo;
             lblEdadP1.Text = Peleadores[IndiceRandom1].Edad.ToString();
             lblVidaP1.Text = Peleadores[IndiceRandom1].Salud.ToString();
             lblVelocidadP1.Text = Peleadores[IndiceRandom1].Velocidad.ToString();
             lblFuerzaP1.Text = Peleadores[IndiceRandom1].Fuerza.ToString();
             lblNivelP1.Text = Peleadores[IndiceRandom1].Nivel.ToString();
-            lblDestrezaP1.Text = Peleadores[IndiceRandom1].Destreza.ToString();
+            lblDestrezaP1.Text = Peleadores[IndiceRandom1].Precision.ToString();
             lblArmaduraP1.Text = Peleadores[IndiceRandom1].Armadura.ToString();
             // Player 2
             lblPersonaje2.Text = Peleadores[IndiceRandom2].Nombre;
-            lblNombreP2.Text = Peleadores[IndiceRandom2].Nombre;
+            lblEspecialidadP2.Text = Peleadores[IndiceRandom2].TipoGuerrero;
             lblTipoP2.Text = Peleadores[IndiceRandom2].Tipo;
             lblEdadP2.Text = Peleadores[IndiceRandom2].Edad.ToString();
             lblVidaP2.Text = Peleadores[IndiceRandom2].Salud.ToString();
             lblVelocidadP2.Text = Peleadores[IndiceRandom2].Velocidad.ToString();
             lblFuerzaP2.Text = Peleadores[IndiceRandom2].Fuerza.ToString();
             lblNivelP2.Text = Peleadores[IndiceRandom2].Nivel.ToString();
-            lblDestrezaP2.Text = Peleadores[IndiceRandom2].Destreza.ToString();
+            lblDestrezaP2.Text = Peleadores[IndiceRandom2].Precision.ToString();
             lblArmaduraP2.Text = Peleadores[IndiceRandom2].Armadura.ToString();
             // Desactivar boton de atacar del player 2
             btnAtacar2.Enabled = false;
@@ -122,7 +122,7 @@ namespace Control_Progreso {
             Button boton = (Button)sender;
             int ED = rand2.Next(40, 101); // Efectividad de disparo: valor de 40 a 100 (Personaje que ataca)
             if (boton.Name == "btnAtacar1") {
-                int PD = Peleadores[IndiceRandom1].Destreza * Peleadores[IndiceRandom1].Fuerza * Peleadores[IndiceRandom1].Nivel; // Poder de disparo (Personaje que ataca)
+                int PD = Peleadores[IndiceRandom1].Precision * Peleadores[IndiceRandom1].Fuerza * Peleadores[IndiceRandom1].Nivel; // Poder de disparo (Personaje que ataca)
                 int VA = PD * ED; // Valor de ataque (Personaje que ataca)
                 int PDEF = Peleadores[IndiceRandom2].Armadura * Peleadores[IndiceRandom2].Velocidad; // Poder de Defensa (personaje que defiende)
                 int MDP = 50000; // Maximo daño provocable
@@ -131,7 +131,7 @@ namespace Control_Progreso {
                                                                                 // resultados muy altos).
                 return danioTotal;
             } else {
-                int PD = Peleadores[IndiceRandom2].Destreza * Peleadores[IndiceRandom2].Fuerza * Peleadores[IndiceRandom2].Nivel;
+                int PD = Peleadores[IndiceRandom2].Precision * Peleadores[IndiceRandom2].Fuerza * Peleadores[IndiceRandom2].Nivel;
                 int VA = PD * ED;
                 int PDEF = Peleadores[IndiceRandom1].Armadura * Peleadores[IndiceRandom2].Velocidad;
                 int MDP = 50000;
